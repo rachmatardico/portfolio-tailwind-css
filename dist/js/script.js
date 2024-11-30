@@ -23,3 +23,11 @@ hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("hamburger-active");
   navMenu.classList.toggle("hidden");
 });
+
+// Klik diluar hamburger nya
+window.addEventListener("click", function (e) {
+  if (e.target != hamburger && e.target != navMenu) {
+    hamburger.classList.toggle("hamburger-active");
+    navMenu.classList.add("hidden");
+  }
+});
